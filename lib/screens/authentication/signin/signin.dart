@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:moviesta/screens/authentication/signup/sign_up_form.dart';
+import 'package:moviesta/screens/authentication/signin/sign_in_form.dart';
 import 'package:moviesta/shared/widgets/footer.dart';
 import 'package:moviesta/shared/widgets/header.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,15 +16,15 @@ class SignUpScreen extends StatelessWidget {
               children: [
                 SizedBox(height:50),
                 Header(
-                  title: 'Sign up',
-                  subtitle: 'Start tracking your movies.'
+                  title: 'Sign In',
+                  subtitle: 'Continue tracking your movies'
                 ),
                 SizedBox(height:70),
-                SignUpForm(),
+                SignInForm(),
                 SizedBox(height:30),
                 Footer(
-                  text: 'Already have an account?',
-                  actionText: 'Sign in',
+                  text: 'Not a member?',
+                  actionText: 'Sign up',
                   onPressed: () {},
                 )
               ],

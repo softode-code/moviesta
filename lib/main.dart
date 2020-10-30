@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moviesta/res/theme.dart';
+import 'package:moviesta/screens/authentication/signin/signin.dart';
 import 'package:moviesta/screens/authentication/signup/signup.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Moviesta',
       theme: theme,
-      home: SignUpScreen(),
+      home: SignInScreen(),
     );
   }
 }
