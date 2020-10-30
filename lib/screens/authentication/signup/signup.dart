@@ -4,6 +4,10 @@ import 'package:moviesta/shared/widgets/footer.dart';
 import 'package:moviesta/shared/widgets/header.dart';
 
 class SignUpScreen extends StatelessWidget {
+
+  final Function toggleView;
+  const SignUpScreen({Key key, this.toggleView}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +29,7 @@ class SignUpScreen extends StatelessWidget {
                 Footer(
                   text: 'Already have an account?',
                   actionText: 'Sign in',
-                  onPressed: () {},
+                  onPressed: toggleView,
                 )
               ],
             ),
