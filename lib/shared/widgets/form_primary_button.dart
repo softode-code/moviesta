@@ -18,12 +18,13 @@ class FormPrimaryButton extends StatelessWidget {
       onTap: onPressed,
       child: PrimaryButtonBackground(
         child: Padding(
-          padding: const EdgeInsets.only(left:30.0, right:30.0),
+          padding: const EdgeInsets.only(left:25.0, right:25.0),
           child: Text(
             text,
             style: TextStyle(
               color: onPrimary,
-              fontSize: 18
+              fontSize: 18,
+              fontWeight: FontWeight.w600
             ),
           ),
         )

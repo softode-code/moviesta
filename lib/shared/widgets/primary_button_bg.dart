@@ -11,7 +11,7 @@ class PrimaryButtonBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(25.0),
+      padding: EdgeInsets.all(20.0),
       decoration: BoxDecoration(
         color: primaryColor,
         borderRadius: BorderRadius.circular(12)
