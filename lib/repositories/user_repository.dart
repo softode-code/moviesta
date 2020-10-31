@@ -6,14 +6,26 @@ class UserRepository{
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future registerUserWithCredentials(String email, String password) async {
-    UserCredential credential = await _auth.createUserWithEmailAndPassword(email: email, password: password);
-    //TODO: write user to database
-    return UserModel.fromUserRepository(credential.user);
+    try {
+      UserCredential credential = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+      //TODO: write user to database
+      return UserModel.fromUserRepository(credential.user);
+    } catch(e){
+      print(e.toString());
+      return null;
+    }
+    
   }
 
   Future signInWithCredentials(String email, String password) async {
-    UserCredential credential = await _auth.signInWithEmailAndPassword(email: email, password: password);
-    return UserModel.fromUserRepository(credential.user);
+    try{
+      UserCredential credential = await _auth.signInWithEmailAndPassword(email: email, password: password);
+      return credential.user;
+    } catch (e) {
+      print('Couldn\'t sign in');
+      print(e.toString());
+      return null;
+    }
   }
 
   Future googleSignIn() async {
