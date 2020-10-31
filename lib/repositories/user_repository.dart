@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:moviesta/models/user_model.dart';
 
 class UserRepository{
@@ -13,6 +14,27 @@ class UserRepository{
   Future signInWithCredentials(String email, String password) async {
     UserCredential credential = await _auth.signInWithEmailAndPassword(email: email, password: password);
     return UserModel.fromUserRepository(credential.user);
+  }
+
+  Future googleSignIn() async {
+    try{
+      GoogleSignIn googleSignIn = GoogleSignIn();
+      GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
+      GoogleSignInAuthentication signInAuthentication = await googleSignInAccount.authentication;
+
+      AuthCredential authCredential = GoogleAuthProvider.credential(
+        accessToken: signInAuthentication.accessToken,
+        idToken: signInAuthentication.idToken
+      );
+
+      UserCredential userCredential = await _auth.signInWithCredential(authCredential);
+      User user = userCredential.user;
+      return user;
+    } catch(e){
+      print('Couldn\'t sign in');
+      print(e.toString());
+      return null;
+    }
   }
 
   Future signOut() async {
