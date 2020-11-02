@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moviesta/res/color.dart';
 import 'package:moviesta/screens/discover/discover.dart';
@@ -37,11 +36,12 @@ class _MainScreenState extends State<MainScreen> {
     ),
   ];
 
-  int selectedIndex = 0;
+  int selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color(0xFF121212),
         items: bottomBarItems,

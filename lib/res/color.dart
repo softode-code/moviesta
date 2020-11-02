@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 Color primaryColor = Color(0xFF9097FD);
 Color onPrimary = Colors.white;
+Color onBackground = Colors.white;
 Color white60 = Colors.white.withOpacity(0.6);
 Color white40 = Colors.white.withOpacity(0.4);
 Color white20 = Colors.white.withOpacity(0.2);

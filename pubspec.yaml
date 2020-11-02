@@ -45,6 +45,15 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
+  fonts:
+    - family: Mulish
+      fonts:
+        - asset: fonts/Mulish-Bold.ttf
+        - asset: fonts/Mulish-ExtraBold.ttf
+        - asset: fonts/Mulish-Light.ttf
+        - asset: fonts/Mulish-Medium.ttf
+        - asset: fonts/Mulish-Regular.ttf
+        - asset: fonts/Mulish-SemiBold.ttf
   assets:
     - assets/
   # assets:

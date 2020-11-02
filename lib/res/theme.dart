@@ -6,4 +6,5 @@ ThemeData theme = ThemeData(
   scaffoldBackgroundColor: Color(0xFF121212),
   primaryColor: primaryColor,
   accentColor: primaryColor,
+  fontFamily: 'Mulish',
 );
