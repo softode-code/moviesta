@@ -36,7 +36,7 @@ class _MainScreenState extends State<MainScreen> {
     ),
   ];
 
-  int selectedIndex = 1;
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
