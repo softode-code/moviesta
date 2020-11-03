@@ -1,7 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moviesta/blocs/popular_movies/popular_movies_event.dart';
 import 'package:moviesta/blocs/popular_movies/popular_movies_state.dart';
-import 'package:moviesta/models/movie.dart';
 import 'package:moviesta/models/movie_response.dart';
 import 'package:moviesta/repositories/movie_repository.dart';
 

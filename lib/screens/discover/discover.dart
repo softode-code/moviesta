@@ -37,7 +37,7 @@ class DiscoverScreen extends StatelessWidget {
                   children: [
                     PopularMovies(movieRepository: movieRepository,),
                     SizedBox(height: 15,),
-                    TrendingMovies(),
+                    TrendingMovies(movieRepository: movieRepository),
                   ],
                 ),
               )
